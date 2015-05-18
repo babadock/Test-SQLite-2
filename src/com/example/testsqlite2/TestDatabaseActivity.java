@@ -33,9 +33,9 @@ public class TestDatabaseActivity extends ListActivity {
 		Student student = null;
 		switch (view.getId()) {
 		case R.id.insert:
-			String[] Students = new String[] { "51104279", "51104204",
+			/*String[] Students = new String[] { "51104279", "51104204",
 					"51104240" };
-			int nextInt = new Random().nextInt(3);
+			int nextInt = new Random().nextInt(3);*/
 			// save the new Student to the database
 			student = datasource.createStudent(Students[nextInt]);
 			adapter.add(student);

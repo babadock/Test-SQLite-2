@@ -13,11 +13,9 @@ public class StudentsDataSource {
 	private SQLiteDatabase database;
 	private MySQLiteHelper dbHelper;
 
-	// , MySQLiteHelper.COLUMN_NAME,
-	// MySQLiteHelper.COLUMN_EMAIL
-
 	private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-			MySQLiteHelper.COLUMN_STUDENT_ID };
+			MySQLiteHelper.COLUMN_STUDENT_ID, MySQLiteHelper.COLUMN_NAME,
+			MySQLiteHelper.COLUMN_EMAIL };
 
 	public StudentsDataSource(Context context) {
 		dbHelper = new MySQLiteHelper(context);
@@ -74,9 +72,6 @@ public class StudentsDataSource {
 
 	private Student cursorToStudent(Cursor cursor) {
 		Student student = new Student();
-		/**
-		 * 1. why it return null 47,... when it has a bug ???
-		 */
 		student.setId(cursor.getLong(0));
 		student.setStudentid(cursor.getString(1));
 		return student;

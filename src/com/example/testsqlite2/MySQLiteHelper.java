@@ -16,12 +16,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	private static final int DATABASE_VERSION = 1;
 
 	// Database creation sql statement
-	// + COLUMN_NAME + " text not null "
-	// + COLUMN_EMAIL + " text not null)"
+
 	private static final String DATABASE_CREATE = "create table "
 			+ TABLE_STUDENTS + "(" + COLUMN_ID
 			+ " integer primary key autoincrement, " + COLUMN_STUDENT_ID
-			+ " text not null)";
+			+ " text not null, " + COLUMN_NAME + " text not null, " + COLUMN_EMAIL
+			+ ", text not null)";
 
 	public MySQLiteHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
