@@ -14,7 +14,7 @@ public class StudentsDataSource {
 	private MySQLiteHelper dbHelper;
 
 	private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-			MySQLiteHelper.COLUMN_STUDENT_ID, MySQLiteHelper.COLUMN_NAME,
+			MySQLiteHelper.COLUMN_NAME, MySQLiteHelper.COLUMN_STUDENT_ID,
 			MySQLiteHelper.COLUMN_EMAIL };
 
 	public StudentsDataSource(Context context) {
@@ -31,12 +31,20 @@ public class StudentsDataSource {
 
 	/**
 	 * 
-	 * @param student
+	 * @param name
+	 * @param student_id
+	 * @param email
 	 * @return
 	 */
-	public Student createStudent(String student) {
+	public Student createStudent(String name, String student_id, String email) {
 		ContentValues values = new ContentValues();
-		values.put(MySQLiteHelper.COLUMN_STUDENT_ID, student);
+		values.put(MySQLiteHelper.COLUMN_EMAIL, email);
+		values.put(MySQLiteHelper.COLUMN_STUDENT_ID, student_id);
+		values.put(MySQLiteHelper.COLUMN_NAME, name);
+
+		/**
+		 * BUG: insertId return -1
+		 */
 		long insertId = database.insert(MySQLiteHelper.TABLE_STUDENTS, null,
 				values);
 		Cursor cursor = database.query(MySQLiteHelper.TABLE_STUDENTS,
@@ -73,7 +81,9 @@ public class StudentsDataSource {
 	private Student cursorToStudent(Cursor cursor) {
 		Student student = new Student();
 		student.setId(cursor.getLong(0));
-		student.setStudentid(cursor.getString(1));
+		student.setName(cursor.getString(1));
+		student.setStudentid(cursor.getString(2));
+		student.setEmail(cursor.getString(3));
 		return student;
 	}
 

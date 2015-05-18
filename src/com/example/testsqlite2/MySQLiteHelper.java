@@ -19,8 +19,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
 	private static final String DATABASE_CREATE = "create table "
 			+ TABLE_STUDENTS + "(" + COLUMN_ID
-			+ " integer primary key autoincrement, " + COLUMN_STUDENT_ID
-			+ " text not null, " + COLUMN_NAME + " text not null, " + COLUMN_EMAIL
+			+ " integer primary key autoincrement, " + COLUMN_NAME
+			+ " text not null, " + COLUMN_STUDENT_ID + " text not null, " + COLUMN_EMAIL
 			+ ", text not null)";
 
 	public MySQLiteHelper(Context context) {

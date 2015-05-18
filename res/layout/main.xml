@@ -10,17 +10,19 @@
         android:orientation="vertical" >
 
         <EditText
-            android:id="@+id/student_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Student Name" />
-
-        <EditText
             android:id="@+id/student_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:text="Tran Trung Vi"
+            android:hint="Student Name" />
+
+        <EditText
+            android:id="@+id/student_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="51104279"
             android:hint="Student Id" />
 
         <EditText
@@ -28,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:text="51104279@hcmut.edu.vn"
             android:hint="Student Email" >
 
             <requestFocus />

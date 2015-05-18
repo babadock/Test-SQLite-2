@@ -1712,8 +1712,8 @@ containing a value of this type.
         public static final int showTitle=0x7f050008;
         public static final int split_action_bar=0x7f050019;
         public static final int student_email=0x7f050042;
-        public static final int student_id=0x7f050040;
-        public static final int student_name=0x7f050041;
+        public static final int student_id=0x7f050041;
+        public static final int student_name=0x7f050040;
         public static final int submit_area=0x7f05003c;
         public static final int tabMode=0x7f050003;
         public static final int title=0x7f050027;
