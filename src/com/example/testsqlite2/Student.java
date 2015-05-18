@@ -41,7 +41,7 @@ public class Student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		String s = "" + this.name + " " + this.id;
+		String s = "" + this.id + " " + this.studentid;
 		return s;
 	}
 

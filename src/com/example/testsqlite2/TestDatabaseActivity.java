@@ -18,6 +18,7 @@ public class TestDatabaseActivity extends ListActivity {
 		setContentView(R.layout.main);
 		datasource = new StudentsDataSource(this);
 		datasource.open();
+		
 		// use the SimpleCursorAdapter to show the
 		// elements in a ListView
 		List<Student> values = datasource.getAllStudents();
